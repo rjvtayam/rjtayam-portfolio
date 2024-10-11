@@ -12,7 +12,7 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
-  background-image: URL("../img/bghireme.png");
+  background-image: URL("./img/bghireme.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
