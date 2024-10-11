@@ -16,7 +16,7 @@ const setActiveLink = () => {
   removeActiveClass(); 
 
   // Set active class based on current URL
-  if (currentHash === "#home" || currentPath === "/your-home-page.html") {
+  if (currentHash === "#home-main" || currentPath === "/your-home-page.html") {
     // Adjust path if needed
     document.getElementById("home").classList.add("active");
   } else if (
