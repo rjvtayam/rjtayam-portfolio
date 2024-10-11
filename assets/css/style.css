@@ -679,6 +679,12 @@ body {
   align-items: center;
 }
 
+.skill-percentage-inline {
+  color: #00ffff;
+  font-size: 1rem;
+  margin-left: 50%;
+}
+
 .skill-name .skill-logo {
   width: 25px;
   height: 25px;
