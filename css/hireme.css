@@ -1,0 +1,306 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("img/bghireme.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Header Styles */
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+}
+
+/* Content Wrapper */
+.hire-me-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+}
+
+/* Certificate Slider */
+.certificate-slider {
+  width: 400px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-slider img {
+  margin-top: 10px;
+  width: 90%;
+  height: 80%;
+}
+
+.certificate-slider h2 {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Slider Container */
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+}
+
+.certificate-img {
+  max-width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Arrow Controls */
+.prev-arrow,
+.next-arrow {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 60px;
+}
+
+.prev-arrow {
+  left: 0;
+}
+
+.next-arrow {
+  right: 0;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.social-icons p {
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+  width: 100%;
+}
+
+.icon-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #666;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.icon-circle:hover {
+  background-color: #1fc8db;
+}
+
+/* Tooltip styling */
+.icon-row a {
+  position: relative;
+  color: #000;
+}
+
+.icon-row a::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1fc8db;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-row a:hover::after {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .hire-me-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certificate-slider {
+    max-width: 100%;
+  }
+
+  .prev-arrow,
+  .next-arrow {
+    width: 35px;
+    height: 40px;
+  }
+
+  .social-icons h2 {
+    font-size: 1rem;
+  }
+
+  .social-icons p {
+    font-size: 0.9rem;
+  }
+
+  .icon-circle {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  .certificate-slider h2 {
+    font-size: 1.1rem;
+  }
+
+  .social-icons h2 {
+    font-size: 0.8rem;
+  }
+
+  .social-icons p {
+    font-size: 0.7rem;
+  }
+
+  .prev-arrow,
+  .next-arrow {
+    width: 30px;
+    height: 35px;
+  }
+
+  .icon-circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .icon-row a::after {
+    font-size: 0.6rem;
+  }
+}
